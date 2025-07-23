@@ -6,15 +6,22 @@
 
 #training coding bash
 
+#output to ask the user to select a command
 
 echo -e "Hello $USER,\nwhich command do you want me to execute for you: ?"
 
+#an array of characters or strings which will be used in the case (that reminds me the switch in C++) 
+
 array=("useping" "useIRC" "usenetcat")
+
+#a for loop to generate the number with each array index
 
 for i in {0..2}; do
 	echo -e "Select a command: $i. ${array[i]}"
 
 done
+
+#input from user if user enter a number according to sizeof(index)
 
 read -p "Enter a number according selecting a command output: " array_num
 
